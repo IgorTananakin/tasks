@@ -21,7 +21,7 @@ function name($firstName)
 }
 
 
-assert( 'ж' == name('Аня'));
+assert('ж' == name('Аня'));
 assert('м' == name('Игорь'));
 assert('м' == name('Сергей'));
 assert('ж' == name('Оля'));
