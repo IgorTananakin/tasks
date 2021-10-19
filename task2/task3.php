@@ -1,6 +1,6 @@
 <?php
 
-function name($firstName)
+function gender($firstName)
 {
     $notSex = ['Саша', 'Женя', 'Ли'];//массив одинаковых имён
     if (in_array($firstName, $notSex)) {
@@ -26,12 +26,12 @@ function name($firstName)
         }
 
 }
-assert('ж' == name('Аня'));
-assert('м' == name('Игорь'));
-assert('м' == name('Сергей'));
-assert('ж' == name('Оля'));
-assert('ж' == name('Мария'));
-assert('м' == name('Олег'));
-assert(null === name('y'));
-assert(null === name(' '));
-assert(null == name('Саша'));
+assert('ж' == gender('Аня'));
+assert('м' == gender('Игорь'));
+assert('м' == gender('Сергей'));
+assert('ж' == gender('Оля'));
+assert('ж' == gender('Мария'));
+assert('м' == gender('Олег'));
+assert(null === gender('y'));
+assert(null === gender(' '));
+assert(null == gender('Саша'));
