@@ -4,7 +4,8 @@ function name($firstName)
 {
     $notSex = ['Саша', 'Женя', 'Ли'];//массив одинаковых имён
     if (in_array($firstName, $notSex)) {
-        return 'такое имя есть м ж';
+        return null;
+
     } else {
         $count = strlen($firstName);
         $symbol = substr($firstName, $count - 2);
@@ -25,7 +26,6 @@ function name($firstName)
         }
 
 }
-
 assert('ж' == name('Аня'));
 assert('м' == name('Игорь'));
 assert('м' == name('Сергей'));
@@ -34,4 +34,4 @@ assert('ж' == name('Мария'));
 assert('м' == name('Олег'));
 assert(null === name('y'));
 assert(null === name(' '));
-assert('такое имя есть м ж' == name('Саша'));
+assert(null == name('Саша'));
