@@ -13,7 +13,7 @@ $a = 1;
 $b = 3;
 $c = -4;
 
-    echo '<p>' . $a . '^2+(' . $b . ')+(' . $c . ')</p>';
+    echo '<p>' . $a . 'x^2+(' . $b . 'x)+(' . $c . ')</p>';
 
     $discriminant = discriminant($a, $b, $c);
 
