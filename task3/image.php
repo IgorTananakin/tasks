@@ -9,9 +9,9 @@
 </head>
 <body>
 <?php
-$arr_image = include __DIR__ . '/mas.php';
-if (isset($arr_image[$_GET['id']])) { ?>?>
-    <img src="<?php echo $arr_image[$_GET['id']];?>" alt="" >
+$image = include __DIR__ . '/mas.php';
+if (isset($image[$_GET['id']])) { ?>?>
+    <img src="<?php echo $image[$_GET['id']];?>" alt="" >
 <?php } else { ?>
 <p> Изображение не найдено!</p>
 <?php } ?>

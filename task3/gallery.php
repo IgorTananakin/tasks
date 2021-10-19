@@ -10,8 +10,8 @@
 <body>
 
 <?php
-    $arr_images = include __DIR__.'/mas.php';
-    foreach ($arr_images as $id => $value) {
+    $images = include __DIR__.'/mas.php';
+    foreach ($images as $id => $value) {
 ?>
     <a href="image.php?id=<? echo $id;?> ">
         <img src=" <?php echo $value;?>" alt="" height="100px" width="100px">
