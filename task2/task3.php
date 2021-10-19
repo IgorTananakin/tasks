@@ -2,32 +2,32 @@
 
 function name($firstName)
 {
-    $notSex = ['Саша', 'Женя', 'Ли'];//массив одинаковых имён
-    foreach ( $notSex as $value) {
-        if ($firstName == $value) {
-            return 'такое имя есть м ж';
-            break;
-        }
-    }
     $count = strlen($firstName);
     $symbol = substr($firstName, $count-2);
-
-    switch($symbol) {
-        case 'я':
-            return 'ж';
-            break;
-        case 'й':
-        case 'ь':
-        case 'г':
-        case 'а':
-            return 'м';
+    switch ($firstName) {
+        case 'Саша':
+        case 'Женя':
+        case 'Ли':
+            return 'такое имя есть м ж';
             break;
         default:
-            return null;
-            break;
+            switch($symbol) {
+                case 'я':
+                    return 'ж';
+                    break;
+                case 'й':
+                case 'ь':
+                case 'г':
+                case 'а':
+                    return 'м';
+                    break;
+                default:
+                    return null;
+                    break;
+            }
     }
-}
 
+}
 assert('ж' == name('Аня'));
 assert('м' == name('Игорь'));
 assert('м' == name('Сергей'));
