@@ -10,8 +10,8 @@
 <body>
 <?php
 $image = include __DIR__ . '/mas.php';
-if (isset($image[$_GET['id']])) { ?>?>
-    <img src="<?php echo $image[$_GET['id']];?>" alt="" >
+if (isset($image[$_GET['id']])) { ?>
+    <img src="<?php echo $image[$_GET['id']]; ?>" alt="" >
 <?php } else { ?>
 <p> Изображение не найдено!</p>
 <?php } ?>
