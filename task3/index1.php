@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="/task3/calculator.php" method="get">
+    <form action="/task3/index1.php" method="get">
         <input type="text" placeholder="" name="x1">
         <select name="operation" id="">
             <option value="+">+</option>
@@ -22,6 +22,12 @@
 
         require __DIR__ . '/calculator.php';
 
+        if (!empty($_GET)) {
+            $x1 = (float)$_GET['x1'];
+            $x2 = (float)$_GET['x2'];
+            $operation = (string)$_GET['operation'];
+            echo calculator($x1 ,$x2, $operation);
+        }
 
         ?>
     </form>

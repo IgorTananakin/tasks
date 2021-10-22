@@ -13,7 +13,7 @@
     $images = include __DIR__.'/mas.php';
     foreach ($images as $id => $value) {
 ?>
-    <a href="image.php?id=<?php echo $id;?> ">
+    <a href="/task3/image.php?id=<?php echo $id;?> ">
         <img src=" <?php echo $value;?>" alt="" height="100px" width="100px">
     </a>
     <?php
